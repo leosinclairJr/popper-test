@@ -20,7 +20,7 @@ docker pull cephbuilder/ceph:latest
 #-e SHA1_OR_REF="f4d39ca86e29555a45a4cff3f03862081bcc1f84" \
 #-e SHA1_OR_REF="11d3bc22ceb151c23c54edaadab2d9d0ec9659fe" \
 dmake \
-  -e SHA1_OR_REF="7e444940d5d4cfc77e89fbbff37291dedc72a6e2" \
+  -e SHA1_OR_REF="1dc4892b8ccfc12534042f392784da1f7fd6f23a" \
   -e GIT_URL="https://github.com/leosinclairJr/ceph.git" \
   -e BUILD_THREADS=`grep processor /proc/cpuinfo | wc -l` \
   -e CONFIGURE_FLAGS="-DWITH_TESTS=OFF" \
@@ -32,6 +32,6 @@ cd -
 #docker tag ceph-1fdfa94459026b70e8925c0a530005456c526260 ceph/daemon:1fdfa94
 #docker tag ceph-f4d39ca86e29555a45a4cff3f03862081bcc1f84 ceph/daemon:f4d39ca
 #docker tag ceph-11d3bc22ceb151c23c54edaadab2d9d0ec9659fe ceph/daemon:11d3bc2
-docker tag ceph-7e444940d5d4cfc77e89fbbff37291dedc72a6e2 ceph/daemon:7e44494
+docker tag ceph-1dc4892b8ccfc12534042f392784da1f7fd6f23a ceph/daemon:1dc4892
 docker build -t tmp .
-docker tag tmp piha.soe.ucsc.edu:5000/ceph/daemon:7e44494
+docker tag tmp piha.soe.ucsc.edu:5000/ceph/daemon:1dc4892
