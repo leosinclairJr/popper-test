@@ -1,4 +1,4 @@
-FROM ceph/daemon:c8198b3
+FROM ceph/daemon:7e44494
 
 ENV DEBIAN_FRONTEND=noninteractive
 RUN echo "==> Install deps" && \
